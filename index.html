@@ -1,10 +1,173 @@
-<html>
-    <head>
-        <title>This shows up in the browser tab</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <h1>This is a headline</h1>
-        <p>This is a <b>bold</b> word in a paragraph.</p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vocabulary Trainer</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal style -->
+    <style>
+        .note {
+            background-color: #eeeeee;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Vocabulary Trainer</h1>
+        <p>Learn a few new words every day.</p>
+    </header>
+
+    <nav>
+        <a href="#words">Words</a>
+        <a href="#practice">Practice</a>
+        <a href="#newword">Add Word</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Welcome</h2>
+
+            <p>
+                This page helps you practise
+                <strong>English vocabulary</strong>.
+            </p>
+
+            <p class="note">
+                Tip: Try to use every new word in a sentence.
+            </p>
+
+            <!-- Inline style -->
+            <p style="color: gray;">
+                This text uses an inline style.
+            </p>
+        </section>
+
+
+        <section id="words">
+            <h2>Today's Words</h2>
+
+            <table>
+                <tr>
+                    <th>English</th>
+                    <th>German</th>
+                </tr>
+
+                <tr>
+                    <td>reliable</td>
+                    <td>zuverlässig</td>
+                </tr>
+
+                <tr>
+                    <td>improve</td>
+                    <td>verbessern</td>
+                </tr>
+
+                <tr>
+                    <td>challenge</td>
+                    <td>Herausforderung</td>
+                </tr>
+            </table>
+
+            <h3>Categories</h3>
+
+            <ul>
+                <li>Work</li>
+                <li>Travel</li>
+                <li>Technology</li>
+            </ul>
+        </section>
+
+
+        <section id="practice">
+            <h2>Practice</h2>
+
+            <p>
+                What does <mark>reliable</mark> mean?
+            </p>
+
+            <form>
+                <input type="radio" name="answer" id="a1">
+                <label for="a1">dangerous</label>
+                <br>
+
+                <input type="radio" name="answer" id="a2">
+                <label for="a2">dependable</label>
+                <br>
+
+                <input type="radio" name="answer" id="a3">
+                <label for="a3">expensive</label>
+
+                <p>
+                    <button type="button" onclick="alert('Hi!')">Check Answer</button>
+                </p>
+            </form>
+
+            <small>
+                How do we get the button to work??
+            </small>
+        </section>
+
+
+        <section id="newword">
+            <h2>Add a New Word</h2>
+
+            <form>
+                <p>
+                    <label for="word">Word:</label>
+                    <input type="text" id="word">
+                </p>
+
+                <p>
+                    <label for="translation">Translation:</label>
+                    <input type="text" id="translation">
+                </p>
+
+                <p>
+                    <label for="category">Category:</label>
+
+                    <select id="category">
+                        <option>Work</option>
+                        <option>Travel</option>
+                        <option>Technology</option>
+                    </select>
+                </p>
+
+                <button type="button">Add Word</button>
+            </form>
+        </section>
+
+
+        <section>
+            <h2>Progress</h2>
+
+            <p>Words learned:</p>
+
+            <progress value="3" max="10"></progress>
+
+            <details>
+                <summary>Show goal</summary>
+                <p>Learn 10 new words this week.</p>
+            </details>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Vocabulary Trainer</p>
+    </footer>
+
+</body>
+
 </html>
